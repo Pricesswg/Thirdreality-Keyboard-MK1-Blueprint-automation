@@ -1,0 +1,228 @@
+blueprint:
+  name: Thirdreality Keyboard MK1 - Automation template
+  description: Used to define 12 automation based on the 12 Matter button on top of the keyboard.
+  domain: automation
+  input:
+    button_1:
+      name: Button 1 Entity
+      description: Define the entity used as trigger for button 1 (es. event.keyboard_button_1)
+      selector:
+        entity: {}
+    action_1:
+      name: Button 1 Action
+      description: Define the action to trigger when the button 1 is pressed
+      default: []
+      selector:
+        action: {}
+
+    button_2:
+      name: Button 2 Entity
+      selector:
+        entity: {}
+    action_2:
+      name: Button 2 Action
+      default: []
+      selector:
+        action: {}
+
+    button_3:
+      name: Button 3 Entity
+      selector:
+        entity: {}
+    action_3:
+      name: Button 3 Action
+      default: []
+      selector:
+        action: {}
+
+    button_4:
+      name: Button 4 Entity
+      selector:
+        entity: {}
+    action_4:
+      name: Button 4 Action
+      default: []
+      selector:
+        action: {}
+
+    button_5:
+      name: Button 5 Entity
+      selector:
+        entity: {}
+    action_5:
+      name: Button 5 Action
+      default: []
+      selector:
+        action: {}
+
+    button_6:
+      name: Button 6 Entity
+      selector:
+        entity: {}
+    action_6:
+      name: Button 6 Action
+      default: []
+      selector:
+        action: {}
+
+    button_7:
+      name: Button 7 Entity
+      selector:
+        entity: {}
+    action_7:
+      name: Button 7 Action
+      default: []
+      selector:
+        action: {}
+
+    button_8:
+      name: Button 8 Entity
+      selector:
+        entity: {}
+    action_8:
+      name: Button 8 Action
+      default: []
+      selector:
+        action: {}
+
+    button_9:
+      name: Button 9 Entity
+      selector:
+        entity: {}
+    action_9:
+      name: Button 9 Action
+      default: []
+      selector:
+        action: {}
+
+    button_10:
+      name: Button 10 Entity
+      selector:
+        entity: {}
+    action_10:
+      name: Button 10 Action
+      default: []
+      selector:
+        action: {}
+
+    button_11:
+      name: Button 11 Entity
+      selector:
+        entity: {}
+    action_11:
+      name: Button 11 Action
+      default: []
+      selector:
+        action: {}
+
+    button_12:
+      name: Button 12 Entity
+      selector:
+        entity: {}
+    action_12:
+      name: Button 12 Action
+      default: []
+      selector:
+        action: {}
+
+mode: single
+
+trigger:
+  - platform: state
+    entity_id: !input button_1
+    id: b1
+  - platform: state
+    entity_id: !input button_2
+    id: b2
+  - platform: state
+    entity_id: !input button_3
+    id: b3
+  - platform: state
+    entity_id: !input button_4
+    id: b4
+  - platform: state
+    entity_id: !input button_5
+    id: b5
+  - platform: state
+    entity_id: !input button_6
+    id: b6
+  - platform: state
+    entity_id: !input button_7
+    id: b7
+  - platform: state
+    entity_id: !input button_8
+    id: b8
+  - platform: state
+    entity_id: !input button_9
+    id: b9
+  - platform: state
+    entity_id: !input button_10
+    id: b10
+  - platform: state
+    entity_id: !input button_11
+    id: b11
+  - platform: state
+    entity_id: !input button_12
+    id: b12
+
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: b1
+        sequence: !input action_1
+
+      - conditions:
+          - condition: trigger
+            id: b2
+        sequence: !input action_2
+
+      - conditions:
+          - condition: trigger
+            id: b3
+        sequence: !input action_3
+
+      - conditions:
+          - condition: trigger
+            id: b4
+        sequence: !input action_4
+
+      - conditions:
+          - condition: trigger
+            id: b5
+        sequence: !input action_5
+
+      - conditions:
+          - condition: trigger
+            id: b6
+        sequence: !input action_6
+
+      - conditions:
+          - condition: trigger
+            id: b7
+        sequence: !input action_7
+
+      - conditions:
+          - condition: trigger
+            id: b8
+        sequence: !input action_8
+
+      - conditions:
+          - condition: trigger
+            id: b9
+        sequence: !input action_9
+
+      - conditions:
+          - condition: trigger
+            id: b10
+        sequence: !input action_10
+
+      - conditions:
+          - condition: trigger
+            id: b11
+        sequence: !input action_11
+
+      - conditions:
+          - condition: trigger
+            id: b12
+        sequence: !input action_12
